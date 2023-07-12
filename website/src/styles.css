@@ -1,0 +1,23 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+  .success{
+    background: rgb(11, 132, 68);
+    color: white;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 20px;
+  }
+  .error{
+    background: red;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: white;
+  }
+  

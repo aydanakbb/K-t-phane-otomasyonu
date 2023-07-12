@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>KÜTÜPHANE</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .card {
+      border-radius: 20px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      border: none;
+      margin-bottom: 20px;
+      margin: 10px;
+      position: relative;
+    }
+
+    .card-img-top {
+      max-width: 200px;
+      max-height: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .card-body {
+      position: relative;
+      padding: 1rem;
+    }
+
+    .card-title {
+      margin-bottom: 0;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .book-summary {
+      margin-top: 10px;
+    }
+
+    .book-details {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 0.5rem;
+      color: #808080;
+      font-size: 12px;
+    }
+
+    .book-details p {
+      margin-bottom: 0.2rem;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  </style>
+  <script src="D:/Users/aakba/OneDrive/Masaüstü/Yeni klasör/website/src/functions.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">KÜTÜPHANE</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+        <a class="nav-link" href="D:/Users/aakba/OneDrive/Masaüstü/Yeni klasör/website/src/kekle.html">Kitap Ekle</a>
+        <a class="nav-link" href="profile.html">Profil</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h1>Kitap Listesi</h1>
+  <br>
+  <div id="book-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+  <div id="result"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <img src="https://www.yediveren.com.tr/wp-content/uploads/ON-KAPAK-5-280x404.jpg" class="card-img-top mt-1"
+               alt="Image">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sherlock Holmes <br> Sussex Vampiri Avcısı</h5>
+            <p class="book-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus pretium ligula, a tempor purus tincidunt ac. Quisque vel lorem sit amet lacus ullamcorper luctus. In sit amet tellus at nibh volutpat dignissim. Mauris volutpat viverra lorem vel aliquam. Sed at est non elit tempus fringilla.</p>
+            <div class="book-details">
+              <p style="color: grey;">Kitabın Yazarı <br> <a style="color: black;">Sir Arthur Connan Doyle</a></p>
+              <p style="color: grey;">Kitabın Türü <br> <a style="color: black;">Roman</a></p>
+              <p style="color: grey;">Sayfa Sayısı <br> <a style="color: black;">248</a></p>
+              <p style="color: grey;">Yayın Tarihi <br> <a style="color: black;">Ocak 2019</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JsC8HBC6vU2RNJuJgXp19ds3b7GGp6hpgfT+Voa5V2xjtU96iUab6vEdEkm6jw7G"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KÜTÜPHANE | Kitap Ekle</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src=" window.location.href = 'D:/Users/aakba/OneDrive/Masaüstü/Yeni klasör/website/src/functions.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<style>
+  .success{
+    background: rgb(11, 132, 68);
+    color: white;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 20px;
+  }
+  .error{
+    background: red;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: white;
+  }
+</style>
+<script>
+function kitapEkle(){
+  var kadi = document.getElementById('kitapadi').value; 
+  var tur = document.getElementById('kitapturu').value;
+  var sayfasayisi = document.getElementById('kitapsayfasayisi').value;
+  var kimg = document.getElementById('kimg').value;
+  
+  if (kadi === '' || tur === '' || sayfasayisi === '' || kimg === '') {
+    document.getElementById('result').innerHTML = 'Boş Alan bırakamazsınız';
+    document.getElementById('result').className = 'error';
+  } else {
+    localStorage.setItem('kitap adı', kadi);
+    localStorage.setItem('kitap türü', tur);
+    localStorage.setItem('sayfa sayısı', sayfasayisi);
+    localStorage.setItem('Kitap Kapağı', kimg);
+    document.getElementById('result').innerHTML = 'Kitap Başarılı Bir Şekilde Eklendi';
+    document.getElementById('result').className = 'success';
+  }
+}
+</script>
+<body>
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card text-white" style="border-radius: 1rem; background: rgb(168, 126, 168);">
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
+              <h2 class="fw-bold mb-2 text-uppercase">Kitap Ekle</h2>
+              <br>
+              <div class="form-outline form-white mb-4">
+                <input type="text" id="kitapadi" class="form-control form-control-lg" placeholder="Kitap Adı"/>
+                <label class="form-label" for="kitapadi"></label>
+                <br>
+              </div>
+              <div class="form-outline form-white mb-4">
+                <input type="text" id="kitapturu" class="form-control form-control-lg" placeholder="Kitap Türü"/>
+                <label class="form-label" for="kitapturu"></label>
+                <br>
+              </div>
+              <div class="form-outline form-white mb-4">
+                <input type="number" id="kitapsayfasayisi" class="form-control form-control-lg" placeholder="Kitap Sayfa Sayısı"/>
+                <label class="form-label" for="kitapsayfasayisi"></label>
+                <br>
+              </div>
+              <div class="form-outline form-white mb-4">
+                <input type="file" class="form-control" id="kimg" aria-describedby="inputGroupFileAddon04" aria-label="Upload" placeholder="Kitap Kapağı">
+                <label class="form-label" for="kimg"></label>
+              </div>
+              <br>
+              <button type="button" class="btn btn-success" style="background: rgb(134, 36, 134);" onclick="kitapEkle()">Kitap ekle</button>
+              <br>
+              <div id="result" class="result"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
